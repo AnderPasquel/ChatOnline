@@ -15,5 +15,5 @@ app.listen(port, function () {
 });
 
 io.on('connection', function (socket) {
-    console.log("El dispositivo con ip:" + socket.handshake.address + "se ha conectado");
+    console.log('El dispositivo con ip:' + socket.handshake.address + 'se ha conectado');
 });
