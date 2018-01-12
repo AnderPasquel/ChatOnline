@@ -1,39 +1,26 @@
 <!DOCTYPE HTML>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatOnline</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
-    <style>
-        #messages{
-            width: 95%;
-            max-width: 400px;
-            height: 350;
-            overflow-y: scroll;
-            border: 1px solid #eeeeee;
-            box-shadow: 0px 0px 20px #cccccc inset;
-        }
-
-        .message{
-            margin: 20px;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid #eeeeee;
-            background: white;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>ChatOnline con NodeJs</h1>
-    <div id="messages"></div>
-    <form onsubmit="return addMessage(this);">
-        <input id ="nickname" type="text" placeholder="Usuario">
-        <textarea id="text" placeholder="Mensage"></textarea>
-        <input type="submit" value="Enviar">
-    </form>
-</body>
+    <div class="container" id="messages"></div>
+    <div class="container">
+        <form onsubmit="return addMessage(this);">
+            <input id="nickname" type="text" class="form-control" placeholder="Usuario">
+            <textarea id="text"  class="form-control" placeholder="Mensage"></textarea>
+            <br>
+            <button type="submit" value="Enviar" class="btn btn-primary btn-block">Enviar</button>
+        </form>
+    </div>
 
+</body>
 </html>

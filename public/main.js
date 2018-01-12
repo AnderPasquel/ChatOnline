@@ -1,4 +1,4 @@
-var socket = io.connect('https://test-chatonline.herokuapp.com/',{'forceNew':true});
+var socket = io.connect('http://148.234.130.159:3000',{'forceNew':true});
 
 //Resivimos el evento "messages" emitido por el servidor
 socket.on('messages', function(data){
@@ -9,8 +9,8 @@ socket.on('messages', function(data){
 function render(data){
     var html = data.map(function(messages,index){
         return(`
-            <div class="messages">
-                <strong>${messages.nickname}</strong>dice:
+            <div class="messages container">
+                <strong>${messages.nickname}</strong>_dice:
                 <p>${messages.text}</p>
                 </div>
                 `);
