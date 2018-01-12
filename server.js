@@ -10,10 +10,23 @@ app.get('/test', function (req, res) {
 
 app.use(express.static('public'));
 
-app.listen(port, function () {
+server.listen(port, function () {
   console.log('La aplicacion esta correinde en el puerto ' + port);
 });
 
+var messages = [{
+    id:1,
+    text:'Bienvenido',
+    nickname:'CHAT--BOT'
+}];
+
 io.on('connection', function (socket) {
-    console.log('El dispositivo con ip:' + socket.handshake.address + 'se ha conectado');
+    console.log("El dispositivo con ip:" + socket.handshake.address + "se ha conectado");
+
+    socket.emit('messages', messages);
+
+    socket.on('add-Message', function(data){
+        messages.push(data);
+        io.sockets.emit('messages',messages);
+    });
 });
