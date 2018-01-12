@@ -1,0 +1,19 @@
+{
+  "name": "chatonline",
+  "version": "1.0.0",
+  "description": "Aplicación Web desarrollada con Node.js que permitira la comunicación entre los usuarios conectados a la plataforma en tiempo real.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon Server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ander Pasquel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
