@@ -1,4 +1,4 @@
-var socket = io.connect('http://192.168.15.4:3000',{'forceNew':true});
+var socket = io.connect('https://test-chatonline.herokuapp.com/',{'forceNew':true});
 
 //Resivimos el evento "messages" emitido por el servidor
 socket.on('messages', function(data){
