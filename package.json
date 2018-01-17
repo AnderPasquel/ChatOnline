@@ -4,6 +4,7 @@
   "description": "Aplicación Web desarrollada con Node.js que permitira la comunicación entre los usuarios conectados a la plataforma en tiempo real.",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ander Pasquel",
