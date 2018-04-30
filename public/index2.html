@@ -12,13 +12,15 @@
 </head>
 
 <body>
-    
-        <div class="list-group">
-                <a href="index2.html" class="list-group-item list-group-item-action">Room 1</a>
-                <a href="#" class="list-group-item list-group-item-action">Room 2</a>
-                <a href="#" class="list-group-item list-group-item-action">Room 3</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Room 4</a>
-              </div>
+    <div class="container" id="messages"></div>
+    <div class="container">
+        <form onsubmit="return addMessage(this);">
+            <input id="nickname" type="text" class="form-control" placeholder="Usuario">
+            <textarea id="text"  class="form-control" placeholder="Mensage"></textarea>
+            <br>
+            <button type="submit" value="Enviar" class="btn btn-primary btn-block">Enviar</button>
+        </form>
+    </div>
 
 </body>
 </html>

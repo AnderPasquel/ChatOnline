@@ -1,4 +1,4 @@
-var socket = io.connect('http://148.234.130.159:3000',{'forceNew':true});
+var socket = io.connect('localhost:3000',{'forceNew':true});
 
 //Resivimos el evento "messages" emitido por el servidor
 socket.on('messages', function(data){
