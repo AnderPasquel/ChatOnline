@@ -1,24 +1,30 @@
-<!DOCTYPE HTML>
-<html lang="es">
-
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ChatOnline</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script src="main.js"></script>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    
-        <div class="list-group">
-                <a href="index2.html" class="list-group-item list-group-item-action">Room 1</a>
-                <a href="index2.html" class="list-group-item list-group-item-action">Room 2</a>
-                <a href="#" class="list-group-item list-group-item-action">Room 3</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Room 4</a>
-              </div>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <ul class="messages"></ul>
+      </div>
+      <input class="inputMessage" placeholder="Mensage..."/>
+      
+    </li>
 
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Ingresa tu nombre</h3>
+        <input class="usernameInput" type="text" maxlength="14" />
+      </div>
+    </li>
+  </ul>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>
